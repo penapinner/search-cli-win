@@ -1,0 +1,27 @@
+# search-cli 配置文件
+# 配置文件位置：%APPDATA%\search\config\config.toml
+#
+# 所有 key 也可以通过环境变量设置（SEARCH_ 前缀），优先级高于配置文件：
+#   set SEARCH_BRAVE_KEY=your_key
+#   set SEARCH_SERPER_KEY=your_key
+#
+# 配置方式：search config set keys.xxx YOUR_KEY
+
+[keys]
+# 各 search provider 的 API Key
+# 申请方式详见 SEARCH_API_KEY_GUIDE.md
+
+brave = ""       # Brave Search       — 通用网页搜索（2000次/月免费）
+serper = ""      # Serper (Google)    — 学术/专利/通用（50次/月免费）
+exa = ""         # Exa                — 语义搜索、找相似论文（1000次/月免费）
+jina = ""        # Jina AI            — 网页搜索 + URL 转 Markdown
+firecrawl = ""   # Firecrawl          — JS 渲染页面抓取（500次免费）
+tavily = ""      # Tavily             — 通用/学术/新闻（1000次/月免费）
+serpapi = ""     # SerpApi            — 80+ 搜索引擎聚合
+perplexity = ""  # Perplexity Sonar   — AI 问答 + 引用
+browserless = "" # Browserless        — Cloudflare/JS 重型页面渲染
+xai = ""         # xAI (Grok)         — X/Twitter 社交搜索
+
+[settings]
+timeout = 10     # 请求超时（秒）
+count = 10       # 默认返回结果数
